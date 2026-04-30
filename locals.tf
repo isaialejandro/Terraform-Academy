@@ -14,7 +14,7 @@ locals {
 locals {
   common_tags = {
     academy     = "terraform202601"
-    environment = var.default_environment
+    environment = var.environment
     owner       = "IA"
     managed_by  = "glober"
     studio      = "cloud"

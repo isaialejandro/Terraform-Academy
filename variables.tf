@@ -4,29 +4,24 @@
 # ======================================
 
 
-variable "default_environment" {
+variable "environment" {
   type        = string
   default     = "develop"
   description = "Dfault environment for the Project."
 }
 
-variable "default_subnet_az" {
+variable "vpc_az" {
   type        = string
   default     = "us-east-1a"
   description = "Default Ec2 subnets Az´s."
 }
 
 
-# ===================
-# Provider Variables
-# ====================
-
-
-
 
 # ======================
 # S3 Remote State Config
 # ======================
+
 
 variable "s3_bucket_name" {
   type        = string
@@ -37,6 +32,18 @@ variable "s3_bucket_name" {
 variable "s3_bucket_key" {
   type    = string
   default = "terraform-academy/first_lab/"
+}
+
+
+# ======================================
+# VPC Variables
+# ======================================
+
+
+variable "vpc_cidr" {
+  type        = string
+  default     = "10.0.0.0/16"
+  description = "Default CIDR for VPC."
 }
 
 
