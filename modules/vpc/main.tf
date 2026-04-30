@@ -25,7 +25,7 @@ resource "aws_vpc" "this" {
 # }
 
 resource "aws_subnet" "public" {
-  count = 2 # Public Sunbnets creation"
+  count = 2 # Public Sunbnets creation with iteration.
   vpc_id = aws_vpc.this.id
   cidr_block = var.public_subnet_cidrs[count.index]
   availability_zone = var.availability_zones[count.index]

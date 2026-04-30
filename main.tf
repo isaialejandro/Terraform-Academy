@@ -16,6 +16,17 @@ module "vpc" {
   private_subnet_cidr = "10.0.3.0/24"
 }
 
+# ---- ECS -----
+# resource "aws_ecs_service" "example" {
+#   # ... other configurations ...
+
+#   force_new_deployment = true
+
+#   triggers = {
+#     redeployment = plantimestamp()
+#   }
+# }
+
 
 # ==========================
 #       === EC2 ===
